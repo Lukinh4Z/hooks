@@ -1,0 +1,20 @@
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nome {
+  margin: 0.5rem 0;
+}
+
+.produtos img:hover {
+  transform: scale(1);
+  animation: animeHover 0.3s forwards;
+}
+
+@keyframes animeHover {
+  to {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,63 @@
+body {
+  margin: 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: calc(100vh + 10rem);
+  /* o que eu to fazendo aqui é definindo o tamanho do app para ter 100% da tela mais o tamanho do footer
+  que eu vou setar "hardcoded" com 10rem */
+}
+
+.content {
+  flex: 1;
+  /* vai fazer com que o content tente ocupar o máximo disponível */
+}
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-top-color: #ccc;
+  border-left-color: #ddd;
+  border-bottom-color: #eee;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
